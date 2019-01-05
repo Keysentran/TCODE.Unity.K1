@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - GroundCheck
+  - AirCheck
+  - EndCheck
+  - Clound
+  - Tree
   layers:
   - Default
   - TransparentFX
@@ -40,4 +46,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tree&&Clound
+    uniqueID: 1928183153
+    locked: 0
+  - name: Player
+    uniqueID: 4092393147
+    locked: 0
+  - name: Text
+    uniqueID: 3770903565
     locked: 0
