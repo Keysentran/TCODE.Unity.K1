@@ -83,7 +83,16 @@ public class GameMain : MonoBehaviour {
         {
             _playGame.SetActive(false);
             _gameOver.SetActive(false);
-            Create();
+            if (_time > 0)
+            {
+                _time -= Time.deltaTime;
+                if (_time < 0)
+                {
+                    CreateTree();
+                    CreateClound();
+                    ResetAndRandomTime();
+                }
+            }
             GetScore();
         }
         if(Phase == (int)_phase._gameOver)
@@ -98,20 +107,6 @@ public class GameMain : MonoBehaviour {
                     _highDistance = _distance;
                 }
                 value = 0;
-            }
-        }
-    }
-
-    private void Create()
-    {
-        if (_time > 0)
-        {
-            _time -= Time.deltaTime;
-            if (_time < 0)
-            {
-                CreateTree();
-                CreateClound();
-                ResetAndRandomTime();
             }
         }
     }
